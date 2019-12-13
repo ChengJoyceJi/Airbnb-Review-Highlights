@@ -37,7 +37,7 @@ import calendar;
 import time;
 ts = calendar.timegm(time.gmtime())
 
-print('Fiting ngram...')
+print('Fitting ngram...')
 from sklearn.feature_extraction.text import CountVectorizer
 ngram_vectorizer = CountVectorizer(binary=True, ngram_range=(1, 3))
 ngram_vectorizer.fit(X_training)

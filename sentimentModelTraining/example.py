@@ -9,7 +9,9 @@ example_input = [
     "Any place is better than this",
     "What a joke",
     "The location is good, but the chicken was raw",
-    "Look at the toilet, it's a better place"
+    "Look at the toilet, it's a better place", 
+    "sliudhjvs aliuhcsaljnsc a;osj",
+    "tyuiodslkvnqljbkd;ao oifpjsv"
 ]
 
 import joblib
