@@ -11,14 +11,21 @@ python -m nltk.downloader universal_tagset
 python -m spacy download en # download the english model
 pip install -U scikit-learn scipy matplotlib
 ```
-Then you can run the code to get key phrases from the review text:
+Then you can run the code to get sentiment scores key phrases from the review text:
 ```
 python main.py <listing_id>
 ```
 For example
 ```
 > python main.py 38241551
-great locat
+Total # of reviews:  2
+Starting basic preprocess of data
+Removing stop words...
+Lemmatizing...
+Transforming...
+average sentiment score:  4.5
+Top three key words (phrases):
+great location
 place
 nice furnish
 ```
