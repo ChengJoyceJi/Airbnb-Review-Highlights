@@ -3,15 +3,13 @@
 ## Installation
 Please use python 3.7
 
-To pip install pke from github:
+Install dependcies:
 ```
 pip install git+https://github.com/boudinfl/pke.git
-```
-pke also requires external resources that can be obtained using:
-```
 python -m nltk.downloader stopwords
 python -m nltk.downloader universal_tagset
 python -m spacy download en # download the english model
+pip install -U scikit-learn scipy matplotlib
 ```
 Then you can run the code to get key phrases from the review text:
 ```
@@ -25,7 +23,6 @@ place
 nice furnish
 ```
 
-
 ## References
-Data source: http://insideairbnb.com/get-the-data.html
-Keyphrase extraction: https://github.com/boudinfl/pke
+- Data source: http://insideairbnb.com/get-the-data.html
+- Keyphrase extraction: https://github.com/boudinfl/pke
