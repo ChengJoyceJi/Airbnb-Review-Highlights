@@ -33,3 +33,4 @@ nice furnish
 ## References
 - Data source: http://insideairbnb.com/get-the-data.html
 - Keyphrase extraction: https://github.com/boudinfl/pke
+- Sentiment analysis: https://towardsdatascience.com/sentiment-analysis-with-python-part-2-4f71e7bde59a

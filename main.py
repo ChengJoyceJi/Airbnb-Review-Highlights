@@ -18,6 +18,8 @@ def main():
         print("This listing has no review. Aborting...")
     
     print("Total # of reviews: ", len(review_list))
+    for i in range(len(review_list)):
+        print("Review #{}: {}".format(i+1, review_list[i]))
 
     # use a pre-trained svm and ngram that used 8000 data to train
     loaded_svm = joblib.load("./trainedModel/svm_8000_1576207965.joblib")
@@ -26,6 +28,9 @@ def main():
         "./trainedModel/ngram_8000_1576207965.joblib"
     )
     predictions = loaded_svm.predict(transformed_input)
+
+    print("==========================================================")
+    
     # sentiment score predictions
     print("average sentiment score: ", numpy.mean(predictions))
 
@@ -50,15 +55,24 @@ def main():
     # minimum similarity for clustering, and the method parameter defines the 
     # linkage method
     extractor.candidate_weighting(
-        threshold=0.74,
+        threshold=0.8,
         method='average',
         heuristic='frequent'
     )
 
+    count_output = 0
+    filter_words = ['place', 'room', 'journey', 'trip']
+
     # print the n-highest (10) scored candidates
     print("Top three key words (phrases):")
-    for (keyphrase, _) in extractor.get_n_best(n=3, stemming=True):
-        print(keyphrase)
+    
+    
+    for (keyphrase, _) in extractor.get_n_best(n=10, stemming=True):
+        if count_output >= 3:
+            break
+        if keyphrase not in filter_words:
+            print(keyphrase)
+            count_output += 1
 
     os.remove("temp_review_text.txt") 
 
