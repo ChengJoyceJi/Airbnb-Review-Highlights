@@ -56,9 +56,9 @@ minut walk
 
 
 ## Contribution
-Yufei Zhao - yufeiz7 - data processing, presentation
-Cheng Ji - chengj4 - keyword extraction, demo
-Hang Zhu - hangzhu2 - sentiment analysis
+- Yufei Zhao - yufeiz7 - data processing, presentation
+- Cheng Ji - chengj4 - keyword extraction, demo
+- Hang Zhu - hangzhu2 - sentiment analysis
 
 
 ## References
